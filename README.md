@@ -1,4 +1,4 @@
-[![Build Status](http://img.shields.io/travis/callumanderson/com-callum-anderson/develop.svg?style=flat)](https://travis-ci.org/callumanderson/com-callum-anderson)
+[![BuildStatus](http://img.shields.io/travis/callumanderson/com-callum-anderson/develop.svg?style=flat)](https://travis-ci.org/callumanderson/com-callum-anderson)
 
 == README
 
