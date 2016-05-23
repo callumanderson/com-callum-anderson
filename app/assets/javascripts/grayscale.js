@@ -4,6 +4,25 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ // function to ease scrolling on anchors
+ function easeScrolling() {
+
+  $('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  }
+)}
+
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
@@ -15,6 +34,7 @@ function collapseNavbar() {
 
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
+$(document).ready(easeScrolling);
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -57,7 +77,7 @@ function init() {
         scrollwheel: false,
         draggable: false,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
@@ -169,7 +189,7 @@ function init() {
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
 
