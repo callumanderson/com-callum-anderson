@@ -15,6 +15,6 @@ RSpec.describe 'The Welcome page', type: :feature do
 
   it 'should have a link to see my work' do
     visit host
-    expect(page).to have_link("See my work", :href=>"/work")
+    expect(page).to have_link("See my work", :href=>"https://github.com/callumanderson/")
   end
 end
