@@ -50,6 +50,7 @@ group :development, :test do
   gem 'launchy'
   gem 'guard-rspec'
   gem 'database_cleaner'
+  gem 'lunchy'
 end
 
 group :development do
